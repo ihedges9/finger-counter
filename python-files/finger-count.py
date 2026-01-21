@@ -1,7 +1,14 @@
 import pandas as pd
 
-
-def countPosition(count = 5, fingers = 5, cycles = 5):
+def countPositionDict(count = 5, fingers = 5, cycles = 5):
+    """
+    Function for finding position of a number in a snake count using fingers/positions. 
+    Utilizes a dictionary for position and number tracking.
+    
+    :param count: The number to be counted to.
+    :param fingers: The number of positions used for counting.
+    :param cycles: The number of times to count `count` on `fingers`
+    """
     hand = {}
     countRange = tuple(range(0, count))
     for i in range(0, fingers):
@@ -30,6 +37,14 @@ def countPosition(count = 5, fingers = 5, cycles = 5):
     
     return hand
 
+def countPositionListTuple(count = 5, fingers = 5, cycles = 5):
+    """
+    Function for finding position of a number in a snake count using fingers/positions. 
+    Utilizes lists and tuples for position and number tracking.
+    
+    :param count: The number to be counted to.
+    :param fingers: The number of positions used for counting.
+    :param cycles: The number of times to count `count` on `fingers`
+    """
 
-
-print(countPosition(5, 7, 6))
+print(countPositionDict(5, 7, 6))
